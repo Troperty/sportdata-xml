@@ -1,0 +1,17 @@
+<SULKYINFO_START>
+    <INFOHEADER>
+        <DATUM>2020-02-17</DATUM>
+        <BAN_ID_SPORT>6</BAN_ID_SPORT>
+        <BANKOD>E</BANKOD>
+        <BANNAMN>Eskilstuna</BANNAMN>
+        <LOPPNR>3</LOPPNR>
+        <PROGRAMNR>2</PROGRAMNR>
+        <VAGNSTYP>
+            <KOD>GU</KOD>
+            <FERG>Gul</FERG>
+            <NAMN>Sulky</NAMN>
+            <KORTNAMN>S</KORTNAMN>
+        </VAGNSTYP>
+        <TIMESTAMP>2020-02-17 07:20:12</TIMESTAMP>
+    </INFOHEADER>
+</SULKYINFO_START>

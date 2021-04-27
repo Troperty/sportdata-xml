@@ -1,0 +1,16 @@
+name: Push to master
+
+on:
+  push:
+    branches:
+      - ci-xml-files
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Add sync ci-xml-files branch to master
+      run: |
+          git pull origin master
+          git push origin ci-xml-files:master

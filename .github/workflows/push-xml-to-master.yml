@@ -11,6 +11,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Add sync ci-xml-files branch to master
+      with:
+          token: ${{secrets.API_TOKEN}}
       run: |
           git pull origin master --allow-unrelated-histories
           git push origin ci-xml-files:master

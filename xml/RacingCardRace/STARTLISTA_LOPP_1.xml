@@ -364,15 +364,19 @@
                         <DEKORFERG />
                     </DRESSDEL>
                     <DRESSDEL>
-                        <DELTYP>ÄRM</DELTYP>
-                        <GRUNDFERG>BLÅ</GRUNDFERG>
-                        <BG_MONSTER>REVÄRER</BG_MONSTER>
-                        <BG_FERG>GULD</BG_FERG>
-                        <FG_MONSTER />
-                        <FG_FERG />
-                        <DEKOR />
-                        <DEKORFERG />
-                    </DRESSDEL>
+                            <DELTYP>ÄRM</DELTYP>
+                            <GRUNDFERG>SVART</GRUNDFERG>
+                            <BG_MONSTER>ÄRMBINDLAR</BG_MONSTER>
+                            <BG_FERG>BEIGE</BG_FERG>
+                            <BG_FERG2>VINRÖD</BG_FERG2>
+                            <BG_FERG3/>
+                            <FG_MONSTER>REVÄRER</FG_MONSTER>
+                            <FG_FERG>ROSA</FG_FERG>
+                            <FG_FERG2>GRÅ</FG_FERG2>
+                            <FG_FERG3>VIT</FG_FERG3>
+                            <DEKOR/>
+                            <DEKORFERG/>
+                        </DRESSDEL>
                     <DRESSBILD_SVG>
                         <svg contentScriptType="text/ecmascript" width="140" zoomAndPan="magnify" style="background:none;" contentStyleType="text/css" height="175" preserveAspectRatio="xMidYMid meet" version="1.1"
                             xmlns="http://www.w3.org/2000/svg"

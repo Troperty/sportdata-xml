@@ -102,7 +102,18 @@
             </PRIS>
         </PRISSKALA>
         <PRISUMMA_TILLEGG />
-        <ALDER_TILLEGG />
+        <ALDER_TILLEGG>
+            <TILLEGG>
+              <MIN_ALDER>4</MIN_ALDER>
+              <MAX_ALDER>4</MAX_ALDER>
+              <METER>20</METER>
+            </TILLEGG>
+            <TILLEGG>
+              <MIN_ALDER>5</MIN_ALDER>
+              <MAX_ALDER>5</MAX_ALDER>
+              <METER>40</METER>
+            </TILLEGG>
+      </ALDER_TILLEGG>
     </PROPINFO>
     <SPELFORMER />
     <STARTER>

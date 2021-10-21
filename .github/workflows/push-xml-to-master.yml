@@ -15,5 +15,6 @@ jobs:
         token: ${{secrets.API_TOKEN_GITHUB_PUSH_TO_REPO}}
     - name: Add sync ci-xml-files branch to master
       run: |
-          git pull origin master --allow-unrelated-histories
-          git push origin ci-xml-files:master
+          mv ./ xml
+          git checkout master
+          git merge ci-xml-files

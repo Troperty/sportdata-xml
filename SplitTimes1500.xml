@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<SplitTimes
+    xmlns="http://schemas.travsport.se/2018">
+    <date>2019-09-12</date>
+    <trackKey>
+        <trackId>27</trackId>
+    </trackKey>
+    <raceNr>5</raceNr>
+    <paceName>pace1500</paceName>
+    <kmTime>
+        <time>1:19.6</time>
+    </kmTime>
+    <id>SplitTimesTrot_2019-09-12_27_5_2019-09-12T11:48:20.0Z</id>
+    <timestamp>2019-09-12T11:48:20.0Z</timestamp>
+</SplitTimes>

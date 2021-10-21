@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TimeToDef
+    xmlns="http://schemas.travsport.se/2018">
+    <date>2019-09-25</date>
+    <trackKey>
+        <trackId>1</trackId>
+    </trackKey>
+    <raceNr>10</raceNr>
+    <countdownToDef>6:51</countdownToDef>
+    <id>TimeToDefTrot_2019-09-25_1_10_2019-09-25T19:37:09.6Z</id>
+    <timestamp>2019-09-25T19:37:09.6Z</timestamp>
+</TimeToDef>

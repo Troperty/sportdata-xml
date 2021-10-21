@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RaceResultFast
+    xmlns="http://schemas.travsport.se/2018">
+    <date>2019-09-25</date>
+    <trackKey>
+        <trackId>1</trackId>
+    </trackKey>
+    <raceNr>1</raceNr>
+    <starts type="array">
+        <StartResult>
+            <startNr>1</startNr>
+            <placeInfo>
+                <place>1</place>
+            </placeInfo>
+        </StartResult>
+        <StartResult>
+            <startNr>7</startNr>
+            <placeInfo>
+                <place>2</place>
+            </placeInfo>
+        </StartResult>
+        <StartResult>
+            <startNr>2</startNr>
+            <placeInfo>
+                <place>3</place>
+            </placeInfo>
+        </StartResult>
+    </starts>
+    <id>RaceResultFastTrot_2019-09-25_1_1_2019-09-25T16:20:41Z</id>
+    <timestamp>2019-09-25T16:20:41Z</timestamp>
+</RaceResultFast>

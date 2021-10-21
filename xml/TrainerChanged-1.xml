@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TrainerChanged
+    xmlns="http://schemas.travsport.se/2018">
+    <date>2019-11-05</date>
+    <trackKey>
+        <trackId>25</trackId>
+    </trackKey>
+    <raceNr>3</raceNr>
+    <startNr>3</startNr>
+    <newTrainer>
+        <name>Franz</name>
+        <surName>Anerland</surName>
+        <shortName>Ane Fr</shortName>
+        <initials>O</initials>
+        <id>82</id>
+        <sex>M</sex>
+        <title>Anerland Franz, Ortnamn</title>
+        <sport>Trotting</sport>
+        <amateur>false</amateur>
+        <swedish>true</swedish>
+        <apprenticePro>false</apprenticePro>
+        <apprenticeAmateur>false</apprenticeAmateur>
+        <licenceType>A1</licenceType>
+        <birthDate>1943-08-13</birthDate>
+        <nationality>SE</nationality>
+        <homeTrack>
+            <code>Å</code>
+        </homeTrack>
+        <active>true</active>
+        <notified>2019-11-05T10:26:05</notified>
+        <colour>
+            <colour>Mörkblå, guldf.midjeband och sömmar; vit</colour>
+            <colourId>296917</colourId>
+            <ownerId>279</ownerId>
+            <ownerColour>false</ownerColour>
+        </colour>
+    </newTrainer>
+    <id>TrainerChangedTrot_2019-11-05_25_3_3_2019-11-05T09:26:05Z</id>
+    <timestamp>2019-11-05T09:26:05Z</timestamp>
+</TrainerChanged>

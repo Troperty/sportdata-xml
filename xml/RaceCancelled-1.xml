@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RaceCancelled
+    xmlns="http://schemas.travsport.se/2018">
+    <date>2019-11-05</date>
+    <trackKey>
+        <trackId>25</trackId>
+    </trackKey>
+    <raceNr>2</raceNr>
+    <info>
+        <cancelled>true</cancelled>
+    </info>
+    <id>RaceCancelledTrot_2019-11-05_25_2_2019-11-05T09:40:39Z</id>
+    <timestamp>2019-11-05T09:40:39Z</timestamp>
+</RaceCancelled>

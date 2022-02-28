@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ANALYZE>
+    <INFOHEADER>
+        <DATE>2019-09-08</DATE>
+        <TRACKID>24</TRACKID>
+        <TRACKNAME>Rättvik</TRACKNAME>
+        <RACENR>43</RACENR>
+        <TIMESTAMP>2019-09-08 15:22:44.797</TIMESTAMP>
+    </INFOHEADER>
+    <RESULT>
+        <RANK>1</RANK>
+        <HC>0</HC>
+        <HORSENR>6</HORSENR>
+        <TIME>2:40.0651</TIME>
+        <DELTA>0cm</DELTA>
+        <KMTIME>2:20.408</KMTIME>
+        <STATUS>OK</STATUS>
+    </RESULT>
+    <RESULT>
+        <RANK>2</RANK>
+        <HC>0</HC>
+        <HORSENR>3</HORSENR>
+        <TIME>2:41.5387</TIME>
+        <DELTA>7 lengths</DELTA>
+        <KMTIME>2:21.701</KMTIME>
+        <STATUS>OK</STATUS>
+    </RESULT>
+    <RESULT>
+        <RANK>3</RANK>
+        <HC>0</HC>
+        <HORSENR>5</HORSENR>
+        <TIME>2:41.5891</TIME>
+        <DELTA>7¼ lengths</DELTA>
+        <KMTIME>2:21.745</KMTIME>
+        <STATUS>OK</STATUS>
+    </RESULT>
+    <RESULT>
+        <RANK>4</RANK>
+        <HC>0</HC>
+        <HORSENR>2</HORSENR>
+        <TIME>2:42.7279</TIME>
+        <DELTA>13¼ lengths</DELTA>
+        <KMTIME>2:22.744</KMTIME>
+        <STATUS>OK</STATUS>
+    </RESULT>
+    <RESULT>
+        <RANK>5</RANK>
+        <HC>0</HC>
+        <HORSENR>4</HORSENR>
+        <TIME>2:44.7307</TIME>
+        <DELTA>23¼ lengths</DELTA>
+        <KMTIME>2:24.501</KMTIME>
+        <STATUS>OK</STATUS>
+    </RESULT>
+    <RESULT>
+        <RANK>6</RANK>
+        <HC>0</HC>
+        <HORSENR>8</HORSENR>
+        <TIME>2:44.9191</TIME>
+        <DELTA>24¼ lengths</DELTA>
+        <KMTIME>2:24.666</KMTIME>
+        <STATUS>OK</STATUS>
+    </RESULT>
+    <RESULT>
+        <RANK>7</RANK>
+        <HC>0</HC>
+        <HORSENR>9</HORSENR>
+        <TIME>2:47.5387</TIME>
+        <DELTA>Distanced</DELTA>
+        <KMTIME>2:26.964</KMTIME>
+        <STATUS>OK</STATUS>
+    </RESULT>
+    <RESULT>
+        <RANK>8</RANK>
+        <HC>0</HC>
+        <HORSENR>1</HORSENR>
+        <TIME>3:37.5463</TIME>
+        <DELTA>Distanced</DELTA>
+        <KMTIME>3:10.830</KMTIME>
+        <STATUS>OK</STATUS>
+    </RESULT>
+</ANALYZE>

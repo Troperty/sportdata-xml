@@ -297,8 +297,12 @@
             <xs:element minOccurs="0" name="primaryColour" type="xs:string"/>
             <xs:element minOccurs="0" name="bgPattern" type="xs:string"/>
             <xs:element minOccurs="0" name="bgColour" type="xs:string"/>
+            <xs:element minOccurs="0" name="bgColour2" type="xs:string"/>
+            <xs:element minOccurs="0" name="bgColour3" type="xs:string"/>
             <xs:element minOccurs="0" name="fgPattern" type="xs:string"/>
             <xs:element minOccurs="0" name="fgColour" type="xs:string"/>
+            <xs:element minOccurs="0" name="fgColour2" type="xs:string"/>
+            <xs:element minOccurs="0" name="fgColour3" type="xs:string"/>
             <xs:element minOccurs="0" name="decor" type="xs:string"/>
             <xs:element minOccurs="0" name="decorColour" type="xs:string"/>
         </xs:sequence>
@@ -657,9 +661,15 @@
             <xs:documentation>Information about the handicap in the race regarding the horses age.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="age" type="xs:integer" minOccurs="0">
+            <!-- <xs:element name="age" type="xs:integer" minOccurs="0"> -->
+            <xs:element name="minAge" type="xs:integer" minOccurs="0">
                 <xs:annotation>
-                    <xs:documentation>The age of the horse.</xs:documentation>
+                    <xs:documentation>The min age of the horse.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="maxAge" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The max age of the horse.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="meters" type="xs:int" minOccurs="1">

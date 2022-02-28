@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RaceDay
+    xmlns="http://schemas.travsport.se/2018">
+    <date>2019-11-05</date>
+    <trackKey>
+        <trackId>25</trackId>
+    </trackKey>
+    <track>
+        <code>SÄ</code>
+        <domesticText>Solänget</domesticText>
+        <length>1004</length>
+        <size>3</size>
+    </track>
+    <raceDayId>585550</raceDayId>
+    <country>
+        <code>SE</code>
+        <domesticText>SVERIGE</domesticText>
+    </country>
+    <nrOfRaces>5</nrOfRaces>
+    <notReleasedRaces>1, 2, 3, 4, 5</notReleasedRaces>
+    <releaseTime>2019-11-05T10:15:00</releaseTime>
+    <notificationStart>2019-10-29</notificationStart>
+    <sport>STC</sport>
+    <id>RaceDayTrot_2019-11-05_25_2019-11-05T09:12:12Z</id>
+    <timestamp>2019-11-05T09:12:12Z</timestamp>
+</RaceDay>

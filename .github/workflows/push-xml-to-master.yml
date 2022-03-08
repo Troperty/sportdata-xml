@@ -10,7 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Add secret token
+      env:
+        API_TOKEN_GITHUB: '${{ secrets.API_TOKEN_GITHUB_PUSH_TO_REPO }}'
     - name: Add sync ci-xml-files branch to master
-      run: git pull origin master
-    - name: Add checkout ci-xml-files branch to master      
-      run: git checkout origin/master
+      run: |
+          git pull origin master
+          git checkout origin/master
+

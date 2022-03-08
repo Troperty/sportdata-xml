@@ -16,7 +16,5 @@ jobs:
     - name: Move files to XML folder
       run: mv ./ ./xml
     - name: Add sync ci-xml-files branch to master
-      run: |
-          git pull origin master
-          git checkout origin/master
-          git merge origin/ci-xml-files
+      run: git pull origin master
+

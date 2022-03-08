@@ -12,10 +12,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         token: ${{ secrets.API_TOKEN_GITHUB_PUSH_TO_REPO }}
-    - name: Move files to XML folder
-      run: mv ./ ./xml
     - name: Add sync ci-xml-files branch to master
       run: |
           git pull origin master
           git checkout origin/master
-          git merge origin/ci-xml-files

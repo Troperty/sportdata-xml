@@ -1,0 +1,20 @@
+name: Push to master
+
+on:
+  push:
+    branches:
+      - ci-schema-files
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Add secret token
+      with:
+        token: ${{secrets.API_TOKEN_GITHUB_PUSH_TO_REPO}}
+    - name: Add sync ci-xml-files branch to master
+      run: |
+          git pull origin master
+          git checkout origin/master
+          git merge origin/ci-schema-files

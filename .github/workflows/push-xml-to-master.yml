@@ -13,9 +13,10 @@ jobs:
     - name: Add secret token
       with:
         token: ${{secrets.API_TOKEN_GITHUB_PUSH_TO_REPO}}
-    - name: Move files to zml folder
+    - name: Move files to XML folder
       run: mv ./ ./xml
     - name: Add sync ci-xml-files branch to master
       run: |
-          git checkout master
-          git merge ci-xml-files
+          git pull origin master
+          git checkout origin/master
+          git merge origin/ci-xml-files

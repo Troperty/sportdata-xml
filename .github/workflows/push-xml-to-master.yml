@@ -11,5 +11,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Add secret token
-      with:
+      uses:
         token: ${{secrets.API_TOKEN_GITHUB_PUSH_TO_REPO}}

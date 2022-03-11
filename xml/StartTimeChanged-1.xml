@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<StartTimeChanged
+    xmlns="http://schemas.travsport.se/2018">
+    <date>2019-11-05</date>
+    <trackKey>
+        <trackId>25</trackId>
+    </trackKey>
+    <raceNr>1</raceNr>
+    <newPostTime>2019-11-05T18:10:00</newPostTime>
+    <id>StartTimeChangedTrot_2019-11-05_25_1_2019-11-05T09:31:00Z</id>
+    <timestamp>2019-11-05T09:31:00Z</timestamp>
+</StartTimeChanged>

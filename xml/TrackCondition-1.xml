@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TrackCondition
+    xmlns="http://schemas.travsport.se/2018">
+    <date>2019-11-05</date>
+    <trackKey>
+        <trackId>25</trackId>
+    </trackKey>
+    <trackCondition>
+        <code>N</code>
+        <domesticText>Något tung bana</domesticText>
+        <englishText>quite heavy track</englishText>
+    </trackCondition>
+    <id>TrackConditionTrot_2019-11-05_25_2019-11-05T09:28:28Z</id>
+    <timestamp>2019-11-05T09:28:28Z</timestamp>
+</TrackCondition>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TimeReset
+    xmlns="http://schemas.travsport.se/2018">
+    <date>2019-09-12</date>
+    <trackKey>
+        <trackId>27</trackId>
+    </trackKey>
+    <raceNr>6</raceNr>
+    <distance>2120</distance>
+    <id>TimeResetTrot_2019-09-12_27_6_2019-09-12T12:03:59.8Z</id>
+    <timestamp>2019-09-12T12:03:59.8Z</timestamp>
+</TimeReset>

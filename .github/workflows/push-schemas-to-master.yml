@@ -1,0 +1,22 @@
+name: merge branch to master
+on: 
+  push:
+    branches: [ci-schema-files]
+    paths:
+    - 'schemas/**'
+jobs:
+  merge-ci-schema-files-back-to-master:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set Git config
+      run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "Github Actions"
+    - name: Merge ci-schema-files back to master
+      run: |
+          git fetch --unshallow
+          git checkout master
+          git pull
+          git merge --no-ff ci-schema-files -m "Auto-merge ci-schema-files back to master"
+          git push

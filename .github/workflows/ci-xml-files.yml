@@ -2,6 +2,8 @@ name: merge branch to master
 on: 
   push:
     branches: [ci-xml-files]
+    paths:
+    - 'xml/**'
 jobs:
   merge-ci-xml-files-back-to-master:
     runs-on: ubuntu-latest

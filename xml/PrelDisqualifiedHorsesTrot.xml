@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<PrelDisqualifiedHorses
+    xmlns="http://schemas.travsport.se/2018">
+    <date>2019-09-25</date>
+    <trackKey>
+        <trackId>1</trackId>
+    </trackKey>
+    <raceNr>10</raceNr>
+    <disqualifiedHorses type="array">
+        <horse>2</horse>
+    </disqualifiedHorses>
+    <id>PrelDisqualifiedHorsesTrot_2019-09-25_1_10_20190925193055948Z</id>
+    <timestamp>2019-09-25T19:30:55.8Z</timestamp>
+</PrelDisqualifiedHorses>

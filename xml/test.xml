@@ -1,16 +1,14 @@
-<?xml version="1.03" encoding="utf-8" standalone="no"?>
-<WeightChangedGallop
+<?xml version="1.01" encoding="utf-8" standalone="no"?>
+<RaceFinished
     xmlns="http://schemas.travsport.se/2018">
-    <date>2019-11-17</date>
+    <date>2019-09-12</date>
     <trackKey>
-        <trackId>229</trackId>
+        <trackId>27</trackId>
     </trackKey>
-    <raceNr>1</raceNr>
-    <startNr>3</startNr>
-    <changes>
-        <oldValue>56</oldValue>
-        <newValue>57</newValue>
-    </changes>
-    <id>WeightChangedGallop_2019-11-17_229_1_3_2019-11-12T14:25:56Z</id>
-    <timestamp>2019-11-12T14:25:56Z</timestamp>
-</WeightChangedGallop>
+    <raceNr>5</raceNr>
+    <prelKmTime>
+        <time>1:26.9</time>
+    </prelKmTime>
+    <id>RaceFinishedTrot_2019-09-12_27_5_2019-09-12T11:49:46.5Z</id>
+    <timestamp>2019-09-12T11:49:46.5Z</timestamp>
+</RaceFinished>

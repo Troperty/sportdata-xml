@@ -16,7 +16,6 @@ jobs:
     - name: Merge ci-xml-files back to master
       run: |
           git fetch --unshallow
-          git checkout ci-xml-files
           git merge --no-ff master -m "Auto-merge master back to master"
           git checkout master
           git pull

@@ -1,18 +1,22 @@
-name: Push to master
-
-on:
+name: merge ci-xml-files branch to master
+on: 
   push:
-    branches:
-      - ci-xml-files
-
+    branches: [ ci-xml-files ]
+    paths:
+    - 'xml/**'
 jobs:
-  build:
+  merge-ci-xml-files-back-to-master:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.API_TOKEN_GITHUB_PUSH_TO_REPO }}
-    - name: Add sync ci-xml-files branch to master
+    - name: Set Git config
       run: |
-          git pull --ff-only origin master
-          git checkout origin/master
+          git config --local user.email "actions@github.com"
+          git config --local user.name "Github Actions"
+    - name: Merge ci-xml-files back to master
+      run: |
+          git fetch --unshallow
+          git checkout master
+          git pull
+          git merge --no-ff ci-xml-files -m "Auto-merge ci-xml-files back to master"
+          git push

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:st="http://schemas.travsport.se/2018"
+	elementFormDefault="qualified" attributeFormDefault="unqualified"
+	targetNamespace="http://schemas.travsport.se/2018">
+  <xs:include schemaLocation="./Common.xsd"/>
+  <xs:element name="RaceSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="date" type="xs:date" />
+        <xs:element name="trackKey" type="st:TrackKey" />
+        <xs:element name="raceNr" type="xs:int" />
+        <xs:element name="country" type="st:CodeText"/>
+        <xs:element name="raceType" type="st:CodeText">
+          <xs:annotation>
+            <xs:documentation>Type of race, (for example V = Vanligt lopp/Regular race).</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="starts">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="start" type="st:start" />
+          </xs:sequence>
+          <xs:attribute name="type" type="xs:string" fixed="array" />
+        </xs:complexType>
+      </xs:element>
+        <xs:element name="sport" type="xs:string" />
+        <xs:element name="id" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="start">
+    <xs:sequence>
+      <xs:element name="horseNr" type="xs:int">
+      </xs:element>
+      <xs:element minOccurs="0" name="shoeInfoPrevious" type="st:ShoeInfo">
+        <xs:annotation>
+          <xs:documentation>Shoe information.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="sulkyTypePrevious" type="st:SulkyInfo">
+        <xs:annotation>
+          <xs:documentation>Sulky information.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

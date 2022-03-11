@@ -1,0 +1,873 @@
+<?xml version="1.04" encoding="utf-8"?>
+<xs:schema targetNamespace="http://schemas.travsport.se/2018"
+    xmlns:st="http://schemas.travsport.se/2018"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+    <xs:complexType name="Amount">
+        <xs:annotation>
+            <xs:documentation>Contains info of a value and what currency it is.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="sum" type="xs:decimal">
+                <xs:annotation>
+                    <xs:documentation>The sum in a certain currency</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="currency" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The currency</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Date">
+        <xs:annotation>
+            <xs:documentation>Date contains info about a date</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="year" type="xs:int" nillable="false">
+                <xs:annotation>
+                    <xs:documentation>Year</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="month" type="xs:int" nillable="false">
+                <xs:annotation>
+                    <xs:documentation>Month</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="day" type="xs:int" nillable="false">
+                <xs:annotation>
+                    <xs:documentation>Day</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DateTime">
+        <xs:annotation>
+            <xs:documentation>st:DateTime contains info about date and time</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="date" type="st:Date">
+                <xs:annotation>
+                    <xs:documentation>The dateobject</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="time" type="st:Time">
+                <xs:annotation>
+                    <xs:documentation>The timeobject</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Time">
+        <xs:annotation>
+            <xs:documentation>st:Time contains info about time</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="hour">
+                <xs:annotation>
+                    <xs:documentation>Hour</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="minute">
+                <xs:annotation>
+                    <xs:documentation>Minute</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="second">
+                <xs:annotation>
+                    <xs:documentation>Second</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="tenth">
+                <xs:annotation>
+                    <xs:documentation>Tenth</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="KmTime">
+        <xs:annotation>
+            <xs:documentation>st:KmTime contains info about kmTime</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element minOccurs="0" name="gallop" type="xs:boolean" />
+            <xs:element minOccurs="0" name="startMethod" type="xs:string" />
+            <xs:element minOccurs="0" name="time" type="xs:string" />
+            <xs:element minOccurs="0" name="noTimeCode" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="CodeText">
+        <xs:annotation>
+            <xs:documentation>CodeText contains Text in 3 diffrent ways: as a code, as domestic text and as an english text</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="code" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The Code for the text</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="domesticText" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The text</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="englishText" nillable="true" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The english text</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TrackKey">
+        <xs:annotation>
+            <xs:documentation>Identifies a track.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="trackId" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Sportsystem id</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ShoeInfo">
+        <xs:annotation>
+            <xs:documentation>Shoeinformation for the horse in the race.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="foreshoes" nillable="true" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Shows if the horse wore foreshoes in the race, (front).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="hindshoes" nillable="true" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Shows if the horse wore hindshoes in the race, (back).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SulkyInfo">
+        <xs:annotation>
+            <xs:documentation>Sulkyinformation for the horse in the race.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="code" nillable="true" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Sulky type code.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="colour" nillable="true" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Sulky type colour code</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="shortName" nillable="true" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Sulky type short name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="name" nillable="true" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Sulky type name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Owner">
+        <xs:annotation>
+            <xs:documentation>The breeder/owner of the horse.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Name of the breeder</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="id" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>ID of the breeder</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="city" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>City of residence of the breeder</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="colour" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="LicenceOwner">
+        <xs:annotation>
+            <xs:documentation>Contains information about a LicenceOwner</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Forename</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="surName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Surname</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="shortName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Short version of the name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="initials" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Driver initials</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="id" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Id of the driver</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="sex" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Licence owner's sex.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="title" type="xs:string" />
+            <xs:element minOccurs="0" name="sport" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Trotting or galopp</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="amateur" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Is the driver amateur</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="swedish" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Is driver swedish</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="apprenticePro" nillable="true" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Shows if a driver is an apprentice for a professional trainer. </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="apprenticeAmateur" nillable="true" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Shows if a driver is an apprentice for an amateur trainer.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="monteStat" type="st:YearStat">
+                <xs:annotation>
+                    <xs:documentation>Shows the statistics for the licence owner's monte races.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="universalRating" type="xs:string" />
+            <xs:element minOccurs="0" name="licenceType" type="xs:string" />
+            <xs:element minOccurs="0" name="birthDate" type="xs:date"/>
+            <xs:element minOccurs="0" name="nationality" type="xs:string" />
+            <xs:element minOccurs="0" name="homeTrack" type="st:CodeText" />
+            <xs:element minOccurs="0" name="active" type="xs:boolean" />
+            <xs:element minOccurs="0" name="notified" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="colour">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="colour" type="xs:string" />
+                        <xs:element minOccurs="0" name="colourId" type="xs:int" />
+                        <xs:element minOccurs="0" name="ownerId" type="xs:int" />
+                        <xs:element name="ownerColour" type="xs:boolean" />
+                        <xs:element minOccurs="0" name="colourParts">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element minOccurs="0" maxOccurs="unbounded" name="colourPart"  type="st:ColourPart" />
+                                </xs:sequence>
+                                <xs:attribute name="type" type="xs:string" fixed="array" />
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ColourPart">
+        <xs:sequence>
+            <xs:element name="partType" type="xs:string"/>
+            <xs:element minOccurs="0" name="primaryColour" type="xs:string"/>
+            <xs:element minOccurs="0" name="bgPattern" type="xs:string"/>
+            <xs:element minOccurs="0" name="bgColour" type="xs:string"/>
+            <xs:element minOccurs="0" name="bgColour2" type="xs:string"/>
+            <xs:element minOccurs="0" name="bgColour3" type="xs:string"/>
+            <xs:element minOccurs="0" name="fgPattern" type="xs:string"/>
+            <xs:element minOccurs="0" name="fgColour" type="xs:string"/>
+            <xs:element minOccurs="0" name="fgColour2" type="xs:string"/>
+            <xs:element minOccurs="0" name="fgColour3" type="xs:string"/>
+            <xs:element minOccurs="0" name="decor" type="xs:string"/>
+            <xs:element minOccurs="0" name="decorColour" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ResultRow">
+        <xs:annotation>
+            <xs:documentation>ResultRow holds information about a horse performance in a race.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="raceKey" type="st:RaceKey">
+                <xs:annotation>
+                    <xs:documentation>Key information about a race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="rowNr" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Row number for the horse in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="startNr" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Starting number for the horse in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="startId" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Starting ID for the horse in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="startPoint" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Startpoint for the horse in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="placeInfo" type="st:PlaceInfo">
+                <xs:annotation>
+                    <xs:documentation>Information regarding the place in the race result.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="raceType" type="st:CodeText" />
+            <xs:element minOccurs="0" name="qualified" type="st:CodeText" />
+            <xs:element minOccurs="0" name="odds" type="xs:string" />
+            <xs:element name="amateurRace" type="xs:boolean" />
+            <xs:element name="apprenticeRace" type="xs:boolean" />
+            <xs:element name="kmTime" type="st:KmTime" />
+            <xs:element minOccurs="0" name="totalTime" type="st:KmTime"/>
+            <xs:element minOccurs="0" name="first500" type="xs:string" />
+            <xs:element minOccurs="0" name="first1000" type="xs:string" />
+            <xs:element minOccurs="0" name="first1500" type="xs:string" />
+            <xs:element minOccurs="0" name="first2000" type="xs:string" />
+            <xs:element minOccurs="0" name="first2500" type="xs:string" />
+            <xs:element minOccurs="0" name="first3000" type="xs:string" />
+            <xs:element minOccurs="0" name="last500" type="xs:string" />
+            <xs:element name="nationalRace" type="xs:boolean" />
+            <xs:element name="circumstances" type="st:StartCircumstances">
+                <xs:annotation>
+                    <xs:documentation>Information about circumstances regarding the horse and the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="conditions">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="raceTerms" type="st:RaceTerms" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="firstPrize" type="st:Amount">
+                <xs:annotation>
+                    <xs:documentation>First prize in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="earning" type="st:Amount">
+                <xs:annotation>
+                    <xs:documentation>Amount that the horse won in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="gallopInfo" type="st:GallopInfo" />
+            <xs:element name="raceClass" type="st:CodeText" />
+            <xs:element name="driver" type="st:LicenceOwner">
+                <xs:annotation>
+                    <xs:documentation>Driver information, (jockey included).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="placed">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" maxOccurs="unbounded" name="Place">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="place" type="xs:int" />
+                                    <xs:element name="horseName" type="xs:string" />
+                                    <xs:element minOccurs="0" name="kmTime" type="st:KmTime" />
+                                    <xs:element minOccurs="0" name="totalTime" type="st:KmTime" />
+                                    <xs:element minOccurs="0" name="weight" type="st:Weight" />
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="type" type="xs:string" fixed="array" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="winMargin" type="xs:string" />
+            <xs:element minOccurs="0" name="resultSorting" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="HorseKey">
+        <xs:annotation>
+            <xs:documentation>Identification info for the horse</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Name.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="seRegNr" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Swedish registration number. Empty if unknown in the swedish system.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="uelnNr" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>UELN number. Empty if unknown in the swedish system.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="id" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Identification number. Zero if unknown in the swedish system.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="nationality" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RaceKey">
+        <xs:annotation>
+            <xs:documentation>Key information about a race.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="date" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Date.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="trackKey" type="st:TrackKey">
+                <xs:annotation>
+                    <xs:documentation>Identifies a track.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="track" type="st:CodeText">
+                <xs:annotation>
+                    <xs:documentation>Track.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="raceNr" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Race number.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="country" type="st:CodeText">
+                <xs:annotation>
+                    <xs:documentation>Track.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ResultExists" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Shows if the race has a result.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="PlaceInfo">
+        <xs:annotation>
+            <xs:documentation>Information regarding the place in the race result.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element minOccurs="0" name="place" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Place in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="reported" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Shows if the horse was reported, (poor trotting).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="disqualified" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Shows if the horse was disqualified.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="scratched" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Shows if the horse was scratched.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="scratchedReason" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>If the horse was scratched, the reason why.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="didNotFinish" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>If the horse did not finish the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="StartCircumstances">
+        <xs:annotation>
+            <xs:documentation>information about circumstances regarding the horse and the race.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element minOccurs="0" name="distance" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Race distance.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="postPosition" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Starting lane for the horse in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="monte" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Shows if the race was a monte race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="nrOfStarts" type="xs:int" />
+            <xs:element name="trackState" type="st:CodeText">
+                <xs:annotation>
+                    <xs:documentation>The state of the track during the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="shoeInfo" type="st:ShoeInfo">
+                <xs:annotation>
+                    <xs:documentation>Shoeinformation for the horse in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="sulkyType" type="st:SulkyInfo">
+                <xs:annotation>
+                    <xs:documentation>Shoeinformation for the horse in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="favourite" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>If the horse was favourite.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RaceTerms">
+        <xs:annotation>
+            <xs:documentation>The terms to be met for the horse to qualify for the race.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="minAge" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Minimum age to participate in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="maxAge" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Maximum age to participate in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="minEarning" type="st:Amount">
+                <xs:annotation>
+                    <xs:documentation>Minimum earnings to participate in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="maxEarning" type="st:Amount">
+                <xs:annotation>
+                    <xs:documentation>Maximum earnings to participate in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="ageHandicaps">
+                <xs:annotation>
+                    <xs:documentation>Information about the handicap in the race regarding the horses age. Ex 20 m added for horses 4 year old.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" maxOccurs="unbounded" name="AgeHandicap" type="st:AgeHandicap"/>
+                    </xs:sequence>
+                    <xs:attribute name="type" type="xs:string" fixed="array" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="earningHandicaps">
+                <xs:annotation>
+                    <xs:documentation>Information about the handicap in the race regarding the horses price money. Ex 20 m added for horses with over 20000 kr earned.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" maxOccurs="unbounded" name="EarningHandicap" type="st:EarningHandicap"/>
+                    </xs:sequence>
+                    <xs:attribute name="type" type="xs:string" fixed="array" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="racePurses">
+                <xs:annotation>
+                    <xs:documentation>The sums of money for each place in the race.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" maxOccurs="unbounded" name="RacePurse"  type="st:RacePurse" />
+                    </xs:sequence>
+                    <xs:attribute name="type" type="xs:string" fixed="array" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="sexes">
+                <xs:annotation>
+                    <xs:documentation>Which genders can participate in the race.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="1" maxOccurs="3" name="sex"  type="st:CodeText" />
+                    </xs:sequence>
+                    <xs:attribute name="type" type="xs:string" fixed="array" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="underAgedDrivers" minOccurs="0" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>If the race contains under aged driver.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="GallopInfo">
+        <xs:annotation>
+            <xs:documentation>Information available if the race was a thouroughbred race.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="rating" type="xs:int" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Rating number describing the horses form, the higher the better.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="weight" type="xs:double" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Weight carried by the horse in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="blinkersType" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Shows the type of blinkers the horse is going to use in the race. Possible values are: B = Blinkers, F = Flexible bridle, S = Soft bridle, N = Nothing. Can be null.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="trackSurface" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The type of surface of the track, (ex dirt, grass).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="AgeHandicap">
+        <xs:annotation>
+            <xs:documentation>Information about the handicap in the race regarding the horses age.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <!-- <xs:element name="age" type="xs:integer" minOccurs="0"> -->
+            <xs:element name="minAge" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The min age of the horse.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="maxAge" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The max age of the horse.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="meters" type="xs:int" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Number of meters.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EarningHandicap">
+        <xs:annotation>
+            <xs:documentation>Information about the handicap in the race regarding the horses price money.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="earning" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Sum of money.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="meters" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Number of meters.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RacePurse">
+        <xs:annotation>
+            <xs:documentation>Information regarding the prizes in the race.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="place" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Place in the race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="prize" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>The prize money.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="YearStat">
+        <xs:annotation>
+            <xs:documentation>YearStat holds a specific year or life total achievements, (wins, places, earnings).</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element minOccurs="0" name="year" type="xs:int" />
+            <xs:element name="nrOfStarts" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Number of starts this year.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="nrOfDisqualified" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Number of times disqualified this year.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="nrOfUnplaced" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Number of times unplaced this year.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="first" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Nr of times as winner.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="second" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Nr of times as runner up.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="third" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Nr of times the horse came in third place.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="forth" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Nr of times the horse came in forth place.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="fifth" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Nr of times the horse came in fifth place.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="earning" type="st:Amount">
+                <xs:annotation>
+                    <xs:documentation>Earned money this year.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="forcedEarning" type="st:Amount">
+                <xs:annotation>
+                    <xs:documentation>Forced amount added to earning. Only trav/harness racing.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="bonusEarning" type="st:Amount">
+                <xs:annotation>
+                    <xs:documentation>Bonus amount added to earning. Only gallop/thoroughbread.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="mileRecord" type="st:Record">
+                <xs:annotation>
+                    <xs:documentation>Record for the year with the starting method American Auto regardless distance, (start behind the gate, 1609 m track length).  Note that the information about track is missing. Only trav/harness racing.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="voltRecord" type="st:Record">
+                <xs:annotation>
+                    <xs:documentation>Record for the year with the starting method Volt regardless distance, (circular starting method without car). Note that the information about track is missing. Only trav/harness racing.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="autoRecord" type="st:Record">
+                <xs:annotation>
+                    <xs:documentation>Record for the year with the starting method Auto regardless distance, (start behind the gate, 1000 m track length). Note that the information about track is missing. Only trav/harness racing.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Record">
+        <xs:annotation>
+            <xs:documentation>The fastest time the horse has run on a sepcific distance and starting method.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element minOccurs="0" name="date" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Record date.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="trackKey" type="st:TrackKey">
+                <xs:annotation>
+                    <xs:documentation>The track where the record was set.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="raceNr" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Race number for the race in which the record was set.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="kmTime" type="st:KmTime">
+                <xs:annotation>
+                    <xs:documentation>Record time.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="distance" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>The records distance.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="recType" type="st:CodeText">
+                <xs:annotation>
+                    <xs:documentation>Type of record.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="place" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Place for the the horse in the record race.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="winner" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Shows if the horse won when setting the record.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Weight">
+        <xs:annotation>
+            <xs:documentation>The weigth a horse will be carrying in a thoroughbred race.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="cardWeight" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation>Swedish programvikt.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="conditionWeight" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation>Swedish propositionsvikt.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="parVikt1" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation>Swedish term.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="parVikt2" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation>Swedish term.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="plustalsVikt" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation>Swedish term.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

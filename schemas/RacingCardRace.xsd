@@ -302,6 +302,11 @@
           <xs:documentation>Statistics regarding the horse.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="scratched" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Shows if the horse has been scratched.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="driverChanged" type="xs:boolean">
         <xs:annotation>
           <xs:documentation>Shows if the original driver has been changed.</xs:documentation>

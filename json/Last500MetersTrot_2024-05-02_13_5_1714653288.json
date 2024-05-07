@@ -1,0 +1,19 @@
+{
+	"type": "Last500MetersTrot",
+	"meta": {
+		"raceNr": 5,
+		"date": "2024-05-02",
+		"trackId": 13
+	},
+	"data": {
+		"Last500Meters": {
+			"date": "2024-05-02",
+			"trackKey": {
+				"trackId": 13
+			},
+			"raceNr": 5,
+			"timestamp": "2024-05-02T18:04:48.474Z",
+			"id": "Last500MetersTrot_2024-05-02_13_5_2024-05-02T18:04:48.474Z"
+		}
+	}
+}

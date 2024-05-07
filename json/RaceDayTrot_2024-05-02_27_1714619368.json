@@ -1,0 +1,33 @@
+{
+	"type": "RaceDayTrot",
+	"meta": {
+		"date": "2024-05-02",
+		"trackId": 27
+	},
+	"data": {
+		"RaceDay": {
+			"date": "2024-05-02",
+			"trackKey": {
+				"trackId": 27
+			},
+			"track": {
+				"code": "VI",
+				"domesticText": "Visby",
+				"length": 1000,
+				"size": 3
+			},
+			"raceDayId": 592569,
+			"country": {
+				"code": "SE",
+				"domesticText": "SVERIGE"
+			},
+			"nrOfRaces": 4,
+			"firstRacePostTime": "2021-03-16T18:00:00",
+			"releaseTime": "2021-03-16T09:33:00",
+			"notificationStart": "2021-03-09",
+			"sport": "STC",
+			"id": "RaceDayTrot_2024-05-02_27_2021-03-16T08:33:00Z",
+			"timestamp": "2021-03-16T08:33:00Z"
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"type": "RaceStartedTrot",
+	"meta": {
+		"raceNr": 3,
+		"trackId": 9,
+		"date": "2024-05-03"
+	},
+	"data": {
+		"RaceStarted": {
+			"id": "RaceStartedTrot_2024-05-03_9_3_2024-05-03T17:15:12.208Z",
+			"date": "2024-05-03",
+			"raceNr": 3,
+			"timestamp": "2024-05-03T17:15:12.208Z",
+			"trackKey": {
+				"trackId": 9
+			}
+		}
+	}
+}

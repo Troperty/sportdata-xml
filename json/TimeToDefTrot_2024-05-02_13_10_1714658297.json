@@ -1,0 +1,20 @@
+{
+	"type": "TimeToDefTrot",
+	"meta": {
+		"raceNr": 10,
+		"date": "2024-05-02",
+		"trackId": 13
+	},
+	"data": {
+		"TimeToDef": {
+			"timestamp": "2024-05-02T19:28:17.006Z",
+			"id": "TimeToDefTrot_2024-05-02_13_10_2024-05-02T19:28:17.006Z",
+			"date": "2024-05-02",
+			"countdownToDef": "0:05",
+			"raceNr": 10,
+			"trackKey": {
+				"trackId": 13
+			}
+		}
+	}
+}

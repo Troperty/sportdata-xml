@@ -1,0 +1,20 @@
+{
+	"type": "StartTimeChangedTrot",
+	"meta": {
+		"date": "2024-05-07",
+		"trackId": 6,
+		"raceNr": 9
+	},
+	"data": {
+		"StartTimeChanged": {
+			"date": "2024-05-07",
+			"trackKey": {
+				"trackId": 6
+			},
+			"raceNr": 9,
+			"newPostTime": "2024-05-07T20:41:00",
+			"id": "StartTimeChangedTrot_2024-05-07_6_9_2024-05-02T12:44:36Z",
+			"timestamp": "2024-05-02T12:44:36Z"
+		}
+	}
+}

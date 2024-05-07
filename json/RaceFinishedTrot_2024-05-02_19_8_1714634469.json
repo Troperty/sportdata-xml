@@ -1,0 +1,22 @@
+{
+	"type": "RaceFinishedTrot",
+	"meta": {
+		"trackId": 19,
+		"date": "2024-05-02",
+		"raceNr": 8
+	},
+	"data": {
+		"RaceFinished": {
+			"date": "2024-05-02",
+			"prelKmTime": {
+				"time": "13.2"
+			},
+			"raceNr": 8,
+			"timestamp": "2024-05-02T12:51:09.415Z",
+			"id": "RaceFinishedTrot_2024-05-02_19_8_2024-05-02T12:51:09.415Z",
+			"trackKey": {
+				"trackId": 19
+			}
+		}
+	}
+}

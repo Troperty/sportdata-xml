@@ -1,0 +1,19 @@
+{
+	"channel": "RaceStartedTrot",
+	"meta": {
+		"trackId": 19,
+		"date": "2024-05-02",
+		"raceNr": 8
+	},
+	"data": {
+		"RaceStarted": {
+			"trackKey": {
+				"trackId": 19
+			},
+			"raceNr": 8,
+			"date": "2024-05-02",
+			"timestamp": "2024-05-02T12:49:09.185Z",
+			"id": "RaceStartedTrot_2024-05-02_19_8_2024-05-02T12:49:09.185Z"
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"channel": "RaceDayTrot",
+	"meta": {
+		"date": "2024-05-03",
+		"trackId": 6000
+	},
+	"data": {
+		"RaceDay": {
+			"date": "2024-05-03",
+			"trackKey": {
+				"trackId": 6000
+			},
+			"track": {
+				"code": "AT",
+				"domesticText": "Automation_Trav",
+				"length": 1000,
+				"size": 2
+			},
+			"raceDayId": 587770,
+			"country": {
+				"code": "SE",
+				"domesticText": "SVERIGE"
+			},
+			"nrOfRaces": 15,
+			"releaseTime": "2020-04-08T13:19:00",
+			"notificationStart": "2020-04-01",
+			"sport": "STC",
+			"id": "RaceDayTrot_2024-05-03_6000_2020-04-08T11:09:33Z",
+			"timestamp": "2020-04-08T11:09:33Z"
+		}
+	}
+}

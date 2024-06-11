@@ -1,0 +1,20 @@
+{
+	"channel": "TimeToDefTrot",
+	"meta": {
+		"trackId": 28,
+		"raceNr": 5,
+		"date": "2024-05-01"
+	},
+	"data": {
+		"TimeToDef": {
+			"timestamp": "2024-05-01T11:44:47.104Z",
+			"raceNr": 5,
+			"countdownToDef": "0:05",
+			"id": "TimeToDefTrot_2024-05-01_28_5_2024-05-01T11:44:47.104Z",
+			"trackKey": {
+				"trackId": 28
+			},
+			"date": "2024-05-01"
+		}
+	}
+}

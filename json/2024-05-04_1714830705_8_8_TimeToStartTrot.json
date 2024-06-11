@@ -1,0 +1,20 @@
+{
+	"channel": "TimeToStartTrot",
+	"meta": {
+		"raceNr": 8,
+		"date": "2024-05-04",
+		"trackId": 8
+	},
+	"data": {
+		"TimeToStart": {
+			"trackKey": {
+				"trackId": 8
+			},
+			"timestamp": "2024-05-04T19:21:45.436Z",
+			"countdownToStart": "0:02",
+			"id": "TimeToStartTrot_2024-05-04_8_8_2024-05-04T19:21:45.436Z",
+			"date": "2024-05-04",
+			"raceNr": 8
+		}
+	}
+}

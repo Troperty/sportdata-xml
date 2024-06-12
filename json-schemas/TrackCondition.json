@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "properties": {
+    "TrackCondition": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "trackKey": {
+          "type": "object",
+          "properties": {
+            "trackId": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "trackId"
+          ]
+        },
+        "trackCondition": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "domesticText": {
+              "type": "string"
+            },
+            "englishText": {
+              "type": "string"
+            }
+          },
+          "required": []
+        },
+        "trackSurface": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "domesticText": {
+              "type": "string"
+            },
+            "englishText": {
+              "type": "string"
+            }
+          },
+          "required": []
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "timestamp",
+        "trackKey"
+      ]
+    }
+  },
+  "required": [
+    "TrackCondition"
+  ]
+}

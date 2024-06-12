@@ -1,0 +1,89 @@
+{
+  "type": "object",
+  "properties": {
+    "SulkyInfoChanged": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "trackKey": {
+          "type": "object",
+          "properties": {
+            "trackId": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "trackId"
+          ]
+        },
+        "raceNr": {
+          "type": "number"
+        },
+        "track": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "domesticText": {
+              "type": "string"
+            },
+            "englishText": {
+              "type": "string"
+            }
+          },
+          "required": []
+        },
+        "startNr": {
+          "type": "number"
+        },
+        "sulkyType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "colour": {
+              "type": "string"
+            },
+            "shortName": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": []
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "timestamp",
+        "trackKey",
+        "raceNr",
+        "track",
+        "startNr",
+        "sulkyType"
+      ]
+    }
+  },
+  "required": [
+    "SulkyInfoChanged"
+  ]
+}

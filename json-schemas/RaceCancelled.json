@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "RaceCancelled": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "trackKey": {
+          "type": "object",
+          "properties": {
+            "trackId": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "trackId"
+          ]
+        },
+        "raceNr": {
+          "type": "number"
+        },
+        "info": {
+          "type": "object",
+          "properties": {
+            "cancelled": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "cancelled"
+          ]
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "timestamp",
+        "trackKey",
+        "raceNr",
+        "info"
+      ]
+    }
+  },
+  "required": [
+    "RaceCancelled"
+  ]
+}

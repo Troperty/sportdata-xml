@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "FullImageReady": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "trackKey": {
+          "type": "object",
+          "properties": {
+            "trackId": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "trackId"
+          ]
+        },
+        "raceNr": {
+          "type": "number"
+        },
+        "endpoint": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "timestamp",
+        "trackKey",
+        "raceNr",
+        "endpoint"
+      ]
+    }
+  },
+  "required": [
+    "FullImageReady"
+  ]
+}

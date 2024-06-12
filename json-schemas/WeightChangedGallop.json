@@ -1,0 +1,63 @@
+{
+  "type": "object",
+  "properties": {
+    "WeightChangedGallop": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "trackKey": {
+          "type": "object",
+          "properties": {
+            "trackId": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "trackId"
+          ]
+        },
+        "raceNr": {
+          "type": "number"
+        },
+        "startNr": {
+          "type": "number"
+        },
+        "changes": {
+          "type": "object",
+          "properties": {
+            "oldValue": {
+              "type": "number"
+            },
+            "newValue": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "oldValue",
+            "newValue"
+          ]
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "timestamp",
+        "trackKey",
+        "raceNr",
+        "startNr",
+        "changes"
+      ]
+    }
+  },
+  "required": [
+    "WeightChangedGallop"
+  ]
+}

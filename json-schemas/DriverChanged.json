@@ -1,0 +1,1272 @@
+{
+  "type": "object",
+  "properties": {
+    "DriverChanged": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "trackKey": {
+          "type": "object",
+          "properties": {
+            "trackId": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "trackId"
+          ]
+        },
+        "raceNr": {
+          "type": "number"
+        },
+        "startNr": {
+          "type": "number"
+        },
+        "newDriver": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "surName": {
+              "type": "string"
+            },
+            "shortName": {
+              "type": "string"
+            },
+            "initials": {
+              "type": "string"
+            },
+            "id": {
+              "type": "number"
+            },
+            "sex": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "sport": {
+              "type": "string"
+            },
+            "amateur": {
+              "type": "boolean"
+            },
+            "swedish": {
+              "type": "boolean"
+            },
+            "apprenticePro": {
+              "type": "boolean"
+            },
+            "apprenticeAmateur": {
+              "type": "boolean"
+            },
+            "monteStat": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "number"
+                },
+                "nrOfStarts": {
+                  "type": "number"
+                },
+                "nrOfDisqualified": {
+                  "type": "number"
+                },
+                "nrOfUnplaced": {
+                  "type": "number"
+                },
+                "first": {
+                  "type": "number"
+                },
+                "second": {
+                  "type": "number"
+                },
+                "third": {
+                  "type": "number"
+                },
+                "forth": {
+                  "type": "number"
+                },
+                "fifth": {
+                  "type": "number"
+                },
+                "earning": {
+                  "type": "object",
+                  "properties": {
+                    "sum": {
+                      "type": "number"
+                    },
+                    "currency": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "currency"
+                  ]
+                },
+                "forcedEarning": {
+                  "type": "object",
+                  "properties": {
+                    "sum": {
+                      "type": "number"
+                    },
+                    "currency": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "currency"
+                  ]
+                },
+                "bonusEarning": {
+                  "type": "object",
+                  "properties": {
+                    "sum": {
+                      "type": "number"
+                    },
+                    "currency": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "currency"
+                  ]
+                },
+                "mileRecord": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "trackKey": {
+                      "type": "object",
+                      "properties": {
+                        "trackId": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "trackId"
+                      ]
+                    },
+                    "raceNr": {
+                      "type": "number"
+                    },
+                    "kmTime": {
+                      "type": "object",
+                      "properties": {
+                        "gallop": {
+                          "type": "boolean"
+                        },
+                        "startMethod": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "noTimeCode": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        }
+                      },
+                      "required": []
+                    },
+                    "distance": {
+                      "type": "number"
+                    },
+                    "recType": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "domesticText": {
+                              "type": "string"
+                            },
+                            "englishText": {
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "place": {
+                      "type": "number"
+                    },
+                    "winner": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "kmTime",
+                    "distance",
+                    "place",
+                    "winner"
+                  ]
+                },
+                "voltRecord": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "trackKey": {
+                      "type": "object",
+                      "properties": {
+                        "trackId": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "trackId"
+                      ]
+                    },
+                    "raceNr": {
+                      "type": "number"
+                    },
+                    "kmTime": {
+                      "type": "object",
+                      "properties": {
+                        "gallop": {
+                          "type": "boolean"
+                        },
+                        "startMethod": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "noTimeCode": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        }
+                      },
+                      "required": []
+                    },
+                    "distance": {
+                      "type": "number"
+                    },
+                    "recType": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "domesticText": {
+                              "type": "string"
+                            },
+                            "englishText": {
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "place": {
+                      "type": "number"
+                    },
+                    "winner": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "kmTime",
+                    "distance",
+                    "place",
+                    "winner"
+                  ]
+                },
+                "autoRecord": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "trackKey": {
+                      "type": "object",
+                      "properties": {
+                        "trackId": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "trackId"
+                      ]
+                    },
+                    "raceNr": {
+                      "type": "number"
+                    },
+                    "kmTime": {
+                      "type": "object",
+                      "properties": {
+                        "gallop": {
+                          "type": "boolean"
+                        },
+                        "startMethod": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "noTimeCode": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        }
+                      },
+                      "required": []
+                    },
+                    "distance": {
+                      "type": "number"
+                    },
+                    "recType": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "domesticText": {
+                              "type": "string"
+                            },
+                            "englishText": {
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "place": {
+                      "type": "number"
+                    },
+                    "winner": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "kmTime",
+                    "distance",
+                    "place",
+                    "winner"
+                  ]
+                }
+              },
+              "required": []
+            },
+            "universalRating": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "licenceType": {
+              "type": "string"
+            },
+            "birthDate": {
+              "type": "string"
+            },
+            "nationality": {
+              "type": "string"
+            },
+            "homeTrack": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "oneOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "domesticText": {
+                  "type": "string"
+                },
+                "englishText": {
+                  "type": "string"
+                }
+              },
+              "required": []
+            },
+            "active": {
+              "type": "boolean"
+            },
+            "notified": {
+              "type": "string"
+            },
+            "colour": {
+              "type": "object",
+              "properties": {
+                "colour": {
+                  "type": "string"
+                },
+                "colourId": {
+                  "type": "number"
+                },
+                "ownerId": {
+                  "type": "number"
+                },
+                "ownerColour": {
+                  "type": "boolean"
+                },
+                "colourParts": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "colourPart": {
+                        "type": "object",
+                        "properties": {
+                          "partType": {
+                            "type": "string"
+                          },
+                          "primaryColour": {
+                            "type": "string"
+                          },
+                          "bgPattern": {
+                            "type": "string"
+                          },
+                          "bgColour": {
+                            "type": "string"
+                          },
+                          "bgColour2": {
+                            "type": "string"
+                          },
+                          "bgColour3": {
+                            "type": "string"
+                          },
+                          "fgPattern": {
+                            "type": "string"
+                          },
+                          "fgColour": {
+                            "type": "string"
+                          },
+                          "fgColour2": {
+                            "type": "string"
+                          },
+                          "fgColour3": {
+                            "type": "string"
+                          },
+                          "decor": {
+                            "type": "string"
+                          },
+                          "decorColour": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "partType"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "colourPart"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "ownerColour"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "surName",
+            "shortName",
+            "initials",
+            "amateur",
+            "swedish"
+          ]
+        },
+        "driverStat": {
+          "type": "object",
+          "properties": {
+            "current": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "number"
+                },
+                "nrOfStarts": {
+                  "type": "number"
+                },
+                "nrOfDisqualified": {
+                  "type": "number"
+                },
+                "nrOfUnplaced": {
+                  "type": "number"
+                },
+                "first": {
+                  "type": "number"
+                },
+                "second": {
+                  "type": "number"
+                },
+                "third": {
+                  "type": "number"
+                },
+                "forth": {
+                  "type": "number"
+                },
+                "fifth": {
+                  "type": "number"
+                },
+                "earning": {
+                  "type": "object",
+                  "properties": {
+                    "sum": {
+                      "type": "number"
+                    },
+                    "currency": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "currency"
+                  ]
+                },
+                "forcedEarning": {
+                  "type": "object",
+                  "properties": {
+                    "sum": {
+                      "type": "number"
+                    },
+                    "currency": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "currency"
+                  ]
+                },
+                "bonusEarning": {
+                  "type": "object",
+                  "properties": {
+                    "sum": {
+                      "type": "number"
+                    },
+                    "currency": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "currency"
+                  ]
+                },
+                "mileRecord": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "trackKey": {
+                      "type": "object",
+                      "properties": {
+                        "trackId": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "trackId"
+                      ]
+                    },
+                    "raceNr": {
+                      "type": "number"
+                    },
+                    "kmTime": {
+                      "type": "object",
+                      "properties": {
+                        "gallop": {
+                          "type": "boolean"
+                        },
+                        "startMethod": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "noTimeCode": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        }
+                      },
+                      "required": []
+                    },
+                    "distance": {
+                      "type": "number"
+                    },
+                    "recType": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "domesticText": {
+                              "type": "string"
+                            },
+                            "englishText": {
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "place": {
+                      "type": "number"
+                    },
+                    "winner": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "kmTime",
+                    "distance",
+                    "place",
+                    "winner"
+                  ]
+                },
+                "voltRecord": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "trackKey": {
+                      "type": "object",
+                      "properties": {
+                        "trackId": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "trackId"
+                      ]
+                    },
+                    "raceNr": {
+                      "type": "number"
+                    },
+                    "kmTime": {
+                      "type": "object",
+                      "properties": {
+                        "gallop": {
+                          "type": "boolean"
+                        },
+                        "startMethod": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "noTimeCode": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        }
+                      },
+                      "required": []
+                    },
+                    "distance": {
+                      "type": "number"
+                    },
+                    "recType": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "domesticText": {
+                              "type": "string"
+                            },
+                            "englishText": {
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "place": {
+                      "type": "number"
+                    },
+                    "winner": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "kmTime",
+                    "distance",
+                    "place",
+                    "winner"
+                  ]
+                },
+                "autoRecord": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "trackKey": {
+                      "type": "object",
+                      "properties": {
+                        "trackId": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "trackId"
+                      ]
+                    },
+                    "raceNr": {
+                      "type": "number"
+                    },
+                    "kmTime": {
+                      "type": "object",
+                      "properties": {
+                        "gallop": {
+                          "type": "boolean"
+                        },
+                        "startMethod": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "noTimeCode": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        }
+                      },
+                      "required": []
+                    },
+                    "distance": {
+                      "type": "number"
+                    },
+                    "recType": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "domesticText": {
+                              "type": "string"
+                            },
+                            "englishText": {
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "place": {
+                      "type": "number"
+                    },
+                    "winner": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "kmTime",
+                    "distance",
+                    "place",
+                    "winner"
+                  ]
+                }
+              },
+              "required": []
+            },
+            "previous": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "number"
+                },
+                "nrOfStarts": {
+                  "type": "number"
+                },
+                "nrOfDisqualified": {
+                  "type": "number"
+                },
+                "nrOfUnplaced": {
+                  "type": "number"
+                },
+                "first": {
+                  "type": "number"
+                },
+                "second": {
+                  "type": "number"
+                },
+                "third": {
+                  "type": "number"
+                },
+                "forth": {
+                  "type": "number"
+                },
+                "fifth": {
+                  "type": "number"
+                },
+                "earning": {
+                  "type": "object",
+                  "properties": {
+                    "sum": {
+                      "type": "number"
+                    },
+                    "currency": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "currency"
+                  ]
+                },
+                "forcedEarning": {
+                  "type": "object",
+                  "properties": {
+                    "sum": {
+                      "type": "number"
+                    },
+                    "currency": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "currency"
+                  ]
+                },
+                "bonusEarning": {
+                  "type": "object",
+                  "properties": {
+                    "sum": {
+                      "type": "number"
+                    },
+                    "currency": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "currency"
+                  ]
+                },
+                "mileRecord": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "trackKey": {
+                      "type": "object",
+                      "properties": {
+                        "trackId": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "trackId"
+                      ]
+                    },
+                    "raceNr": {
+                      "type": "number"
+                    },
+                    "kmTime": {
+                      "type": "object",
+                      "properties": {
+                        "gallop": {
+                          "type": "boolean"
+                        },
+                        "startMethod": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "noTimeCode": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        }
+                      },
+                      "required": []
+                    },
+                    "distance": {
+                      "type": "number"
+                    },
+                    "recType": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "domesticText": {
+                              "type": "string"
+                            },
+                            "englishText": {
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "place": {
+                      "type": "number"
+                    },
+                    "winner": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "kmTime",
+                    "distance",
+                    "place",
+                    "winner"
+                  ]
+                },
+                "voltRecord": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "trackKey": {
+                      "type": "object",
+                      "properties": {
+                        "trackId": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "trackId"
+                      ]
+                    },
+                    "raceNr": {
+                      "type": "number"
+                    },
+                    "kmTime": {
+                      "type": "object",
+                      "properties": {
+                        "gallop": {
+                          "type": "boolean"
+                        },
+                        "startMethod": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "noTimeCode": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        }
+                      },
+                      "required": []
+                    },
+                    "distance": {
+                      "type": "number"
+                    },
+                    "recType": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "domesticText": {
+                              "type": "string"
+                            },
+                            "englishText": {
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "place": {
+                      "type": "number"
+                    },
+                    "winner": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "kmTime",
+                    "distance",
+                    "place",
+                    "winner"
+                  ]
+                },
+                "autoRecord": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "trackKey": {
+                      "type": "object",
+                      "properties": {
+                        "trackId": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "trackId"
+                      ]
+                    },
+                    "raceNr": {
+                      "type": "number"
+                    },
+                    "kmTime": {
+                      "type": "object",
+                      "properties": {
+                        "gallop": {
+                          "type": "boolean"
+                        },
+                        "startMethod": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "noTimeCode": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        }
+                      },
+                      "required": []
+                    },
+                    "distance": {
+                      "type": "number"
+                    },
+                    "recType": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "domesticText": {
+                              "type": "string"
+                            },
+                            "englishText": {
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "place": {
+                      "type": "number"
+                    },
+                    "winner": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "kmTime",
+                    "distance",
+                    "place",
+                    "winner"
+                  ]
+                }
+              },
+              "required": []
+            }
+          },
+          "required": [
+            "current"
+          ]
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "timestamp",
+        "trackKey",
+        "raceNr",
+        "startNr",
+        "newDriver",
+        "driverStat"
+      ]
+    }
+  },
+  "required": [
+    "DriverChanged"
+  ]
+}

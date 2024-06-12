@@ -1,0 +1,116 @@
+{
+  "type": "object",
+  "properties": {
+    "RaceResultFast": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "trackKey": {
+          "type": "object",
+          "properties": {
+            "trackId": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "trackId"
+          ]
+        },
+        "raceNr": {
+          "type": "number"
+        },
+        "starts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "StartResult": {
+                "type": "object",
+                "properties": {
+                  "startNr": {
+                    "type": "number"
+                  },
+                  "placeInfo": {
+                    "type": "object",
+                    "properties": {
+                      "place": {
+                        "type": "number"
+                      },
+                      "reported": {
+                        "type": "boolean"
+                      },
+                      "disqualified": {
+                        "type": "boolean"
+                      },
+                      "scratched": {
+                        "type": "boolean"
+                      },
+                      "scratchedReason": {
+                        "type": "string"
+                      },
+                      "didNotFinish": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": []
+                  }
+                },
+                "required": [
+                  "startNr",
+                  "placeInfo"
+                ]
+              }
+            },
+            "required": [
+              "StartResult"
+            ]
+          }
+        },
+        "prelWinKmTime": {
+          "type": "object",
+          "properties": {
+            "gallop": {
+              "type": "boolean"
+            },
+            "startMethod": {
+              "type": "string"
+            },
+            "time": {
+              "type": "string"
+            },
+            "noTimeCode": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          },
+          "required": []
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "timestamp",
+        "trackKey",
+        "raceNr",
+        "starts"
+      ]
+    }
+  },
+  "required": [
+    "RaceResultFast"
+  ]
+}

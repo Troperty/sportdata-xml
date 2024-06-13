@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "properties": {
+    "ShoeInfoChanged": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "trackKey": {
+          "type": "object",
+          "properties": {
+            "trackId": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "trackId"
+          ]
+        },
+        "raceNr": {
+          "type": "number"
+        },
+        "track": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "domesticText": {
+              "type": "string"
+            },
+            "englishText": {
+              "type": "string"
+            }
+          },
+          "required": []
+        },
+        "startNr": {
+          "type": "number"
+        },
+        "shoeInfo": {
+          "type": "object",
+          "properties": {
+            "foreshoes": {
+              "type": "boolean"
+            },
+            "hindshoes": {
+              "type": "boolean"
+            }
+          },
+          "required": []
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "timestamp",
+        "trackKey",
+        "raceNr",
+        "track",
+        "startNr",
+        "shoeInfo"
+      ]
+    }
+  },
+  "required": [
+    "ShoeInfoChanged"
+  ]
+}

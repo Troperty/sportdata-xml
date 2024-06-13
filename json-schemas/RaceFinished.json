@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "properties": {
+    "RaceFinished": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "trackKey": {
+          "type": "object",
+          "properties": {
+            "trackId": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "trackId"
+          ]
+        },
+        "raceNr": {
+          "type": "number"
+        },
+        "prelKmTime": {
+          "type": "object",
+          "properties": {
+            "gallop": {
+              "type": "boolean"
+            },
+            "startMethod": {
+              "type": "string"
+            },
+            "time": {
+              "type": "string"
+            },
+            "noTimeCode": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          },
+          "required": []
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "timestamp",
+        "trackKey",
+        "raceNr"
+      ]
+    }
+  },
+  "required": [
+    "RaceFinished"
+  ]
+}

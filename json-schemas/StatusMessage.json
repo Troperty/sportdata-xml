@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "properties": {
+    "StatusMessage": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "trackKey": {
+          "type": "object",
+          "properties": {
+            "trackId": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "trackId"
+          ]
+        },
+        "raceNr": {
+          "type": "number"
+        },
+        "cause": {
+          "type": "string"
+        },
+        "consequences": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "timestamp",
+        "trackKey",
+        "cause",
+        "consequences"
+      ]
+    }
+  },
+  "required": [
+    "StatusMessage"
+  ]
+}

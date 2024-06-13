@@ -1,0 +1,162 @@
+{
+  "type": "object",
+  "properties": {
+    "RaceDay": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "trackKey": {
+          "type": "object",
+          "properties": {
+            "trackId": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "trackId"
+          ]
+        },
+        "track": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "domesticText": {
+              "type": "string"
+            },
+            "length": {
+              "type": "number"
+            },
+            "size": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "code",
+            "domesticText"
+          ]
+        },
+        "raceDayId": {
+          "type": "number"
+        },
+        "country": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "domesticText": {
+              "type": "string"
+            },
+            "englishText": {
+              "type": "string"
+            }
+          },
+          "required": []
+        },
+        "nrOfRaces": {
+          "type": "number"
+        },
+        "notReleasedRaces": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "firstRacePostTime": {
+          "type": "string"
+        },
+        "releaseTime": {
+          "type": "string"
+        },
+        "notificationStart": {
+          "type": "string"
+        },
+        "raceDayType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "domesticText": {
+              "type": "string"
+            },
+            "englishText": {
+              "type": "string"
+            }
+          },
+          "required": []
+        },
+        "raceDayClass": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "domesticText": {
+              "type": "string"
+            },
+            "englishText": {
+              "type": "string"
+            }
+          },
+          "required": []
+        },
+        "attendance": {
+          "type": "number"
+        },
+        "sport": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "timestamp",
+        "trackKey",
+        "track",
+        "raceDayId",
+        "country",
+        "nrOfRaces",
+        "sport"
+      ]
+    }
+  },
+  "required": [
+    "RaceDay"
+  ]
+}

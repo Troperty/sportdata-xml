@@ -1323,7 +1323,9 @@
                 ]
               }
             },
-            "required": []
+            "required": [
+              "Start"
+            ]
           }
         }
       },
@@ -1333,8 +1335,7 @@
         "timestamp",
         "trackKey",
         "track",
-        "raceNr",
-        "starts"
+        "raceNr"
       ]
     }
   },

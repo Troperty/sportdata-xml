@@ -271,7 +271,6 @@
                   }
                 },
                 "required": [
-                  "startNr",
                   "horse",
                   "placeInfo",
                   "totalTime",

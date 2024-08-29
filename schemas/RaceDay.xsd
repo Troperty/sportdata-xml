@@ -23,8 +23,8 @@
         <xs:element name="nrOfRaces" type="xs:int" />
         <xs:element minOccurs="0" name="notReleasedRaces" type="xs:string" />
         <xs:element minOccurs="0" name="firstRacePostTime" type="xs:dateTime" />
-        <xs:element name="releaseTime" type="xs:dateTime" />
-        <xs:element name="notificationStart" type="xs:date" />
+        <xs:element minOccurs="0" name="releaseTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="notificationStart" type="xs:date" />
         <xs:element minOccurs="0" name="raceDayType" type="st:CodeText"/>
         <xs:element minOccurs="0" name="raceDayClass" type="st:CodeText"/>
         <xs:element minOccurs="0" name="attendance" type="xs:int"/>

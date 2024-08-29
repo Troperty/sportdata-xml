@@ -8,7 +8,7 @@
             <xs:documentation>Contains info of a value and what currency it is.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="sum" type="xs:decimal">
+            <xs:element minOccurs="0" name="sum" type="xs:decimal">
                 <xs:annotation>
                     <xs:documentation>The sum in a certain currency</xs:documentation>
                 </xs:annotation>

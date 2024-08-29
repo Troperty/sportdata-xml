@@ -13,8 +13,8 @@
         <xs:element name="changes">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="oldValue" type="xs:int" />
-              <xs:element name="newValue" type="xs:int" />
+              <xs:element name="oldValue" type="xs:decimal" />
+              <xs:element name="newValue" type="xs:decimal" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

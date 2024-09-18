@@ -11,7 +11,7 @@
                 <xs:element name="date" type="xs:date" />
                 <xs:element name="trackKey" type="st:TrackKey" />
                 <xs:element name="track"  type="st:CodeText" />
-                <xs:element name="trainers">
+                <xs:element minOccurs="0" name="trainers">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element maxOccurs="unbounded" name="trainer">

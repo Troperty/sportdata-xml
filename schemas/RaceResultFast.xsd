@@ -24,6 +24,7 @@
             <xs:attribute name="type" type="xs:string" fixed="array" />
           </xs:complexType>
         </xs:element>
+        <xs:element minOccurs="0" name="prelWinKmTime" type="st:KmTime" />
         <xs:element name="id" type="xs:string" />
         <xs:element name="timestamp" type="xs:dateTime" />
       </xs:sequence>

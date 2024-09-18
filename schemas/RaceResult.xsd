@@ -42,14 +42,14 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="stewards" type="st:CodeText" />
                 <xs:element name="RaceResultReleased" type="xs:boolean" />
-                <xs:element name="starts">
+                <xs:element minOccurs="0" name="starts">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element maxOccurs="unbounded" name="StartResult">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:choice maxOccurs="unbounded">
-                                            <xs:element name="startNr" type="xs:int" />
+                                            <xs:element minOccurs="0" name="startNr" type="xs:int" />
                                             <xs:element minOccurs="0" name="postPosition" type="xs:unsignedInt" />
                                             <xs:element name="horse">
                                                 <xs:complexType>
@@ -64,7 +64,7 @@
                                                     </xs:sequence>
                                                 </xs:complexType>
                                             </xs:element>
-                                            <xs:element name="startPoint" type="xs:int" />
+                                            <xs:element minOccurs="0" name="startPoint" type="xs:int" />
                                             <xs:element name="placeInfo" type="st:PlaceInfo" />
                                             <xs:element minOccurs="0" name="earning" type="st:Amount"/>
                                             <xs:element minOccurs="0" name="bonusEarning" type="st:Amount"/>
@@ -72,7 +72,7 @@
                                             <xs:element name="kmTime" type="st:KmTime"/>
                                             <xs:element name="shoeInfo" type="st:ShoeInfo"/>
                                             <xs:element minOccurs="0" name="sulkyType" type="st:SulkyInfo"/>
-                                            <xs:element minOccurs="0" name="resultSorting" type="xs:string" />
+                                            <xs:element minOccurs="0" name="resultSorting" type="xs:int" />
                                         </xs:choice>
                                     </xs:sequence>
                                 </xs:complexType>

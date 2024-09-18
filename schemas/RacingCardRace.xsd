@@ -117,6 +117,11 @@
       <xs:documentation>Information about the race  that determines which horses that are allowed to participate.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
+      <xs:element minOccurs="0" name="maxNrOfStarts" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>The max number of starts in the race.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="raceName" type="xs:string">
         <xs:annotation>
           <xs:documentation>The name of the race.</xs:documentation>
@@ -302,12 +307,17 @@
           <xs:documentation>Statistics regarding the horse.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="scratched" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Shows if the horse has been scratched.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="driverChanged" type="xs:boolean">
         <xs:annotation>
           <xs:documentation>Shows if the original driver has been changed.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="startPoint" type="xs:int">
+      <xs:element minOccurs="0" name="startPoint" type="xs:int">
         <xs:annotation>
           <xs:documentation>Points earned during the last starts. Is given by the Swedish Trotting Association. Is used to rank horses.</xs:documentation>
         </xs:annotation>
@@ -344,7 +354,7 @@
           <xs:documentation>Shows the type of blinkers the horse is going to use in the race. Possible values are: B = Blinkers, F = Flexible bridle, S = Soft bridle, N = Nothing. Can be null.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="rating" type="xs:integer">
+      <xs:element minOccurs="0" name="rating" type="xs:integer">
         <xs:annotation>
           <xs:documentation>A rating number based on the last starts the horse has made.</xs:documentation>
         </xs:annotation>

@@ -8,7 +8,7 @@
       <xs:sequence>
         <xs:element name="date" type="xs:date" />
         <xs:element name="trackKey" type="st:TrackKey" />
-        <xs:element name="raceNr" type="xs:int" />
+        <xs:element minOccurs="0" name="raceNr" type="xs:int" />
         <xs:element name="cause" type="xs:string" />
         <xs:element name="consequences" type="xs:string" />
         <xs:element name="id" type="xs:string" />

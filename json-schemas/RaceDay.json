@@ -74,14 +74,7 @@
           "type": "number"
         },
         "notReleasedRaces": {
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "number"
-            }
-          ]
+          "type": "string"
         },
         "firstRacePostTime": {
           "type": "string"

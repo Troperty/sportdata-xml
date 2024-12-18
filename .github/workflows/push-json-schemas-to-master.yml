@@ -1,11 +1,11 @@
-name: merge schema branch to master
+name: merge json-schema branch to master
 on:
   push:
-    branches: [ci-schema-files]
+    branches: [ci-json-schema-files]
     paths:
-      - "schemas/**"
+      - "json-schemas/**"
 jobs:
-  merge-ci-schema-files-back-to-master:
+  merge-ci-json-schema-files-back-to-master:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,16 +18,16 @@ jobs:
           git fetch origin master
           git checkout master
           git pull origin master
-      - name: Merge ci-schema-files into master
+      - name: Merge ci-json-schema-files into master
         run: |
-          git merge --no-ff ci-schema-files -m "Auto-merge ci-schema-files back to master"
+          git merge --no-ff ci-json-schema-files -m "Auto-merge ci-json-schema-files back to master"
       - name: Push changes to master
         run: |
           git push origin master
-      - name: Delete ci-schema-files branch
+      - name: Delete ci-json-schema-files branch
         if: success()
         run: |
-          git push origin --delete ci-schema-files
+          git push origin --delete ci-json-schema-files
       - name: Clean up local repository
         run: |
-          git branch -D ci-schema-files
+          git branch -D ci-json-schema-files

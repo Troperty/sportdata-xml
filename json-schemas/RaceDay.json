@@ -20,9 +20,7 @@
               "type": "number"
             }
           },
-          "required": [
-            "trackId"
-          ]
+          "required": ["trackId"]
         },
         "track": {
           "type": "object",
@@ -40,10 +38,7 @@
               "type": "number"
             }
           },
-          "required": [
-            "code",
-            "domesticText"
-          ]
+          "required": ["code", "domesticText"]
         },
         "raceDayId": {
           "type": "number"
@@ -74,14 +69,7 @@
           "type": "number"
         },
         "notReleasedRaces": {
-          "oneOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "number"
-            }
-          ]
+          "type": "string"
         },
         "firstRacePostTime": {
           "type": "string"
@@ -156,7 +144,5 @@
       ]
     }
   },
-  "required": [
-    "RaceDay"
-  ]
+  "required": ["RaceDay"]
 }

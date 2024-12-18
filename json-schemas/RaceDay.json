@@ -106,14 +106,7 @@
           "type": "object",
           "properties": {
             "code": {
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "number"
-                }
-              ]
+              "oneOf": [{ "type": "string" }, { "type": "number" }]
             },
             "domesticText": {
               "type": "string"

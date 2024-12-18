@@ -15,12 +15,12 @@ jobs:
           git config --local user.name "GitHub Actions"
       - name: Ensure master branch is up-to-date
         run: |
-          git fetch origin master
+          git fetch --unshallow
           git checkout master
           git pull origin master
       - name: Merge ci-schema-files into master
         run: |
-          git merge --no-ff ci-schema-files -m "Auto-merge ci-schema-files back to master"
+          git merge --no-ff --allow-unrelated-histories ci-schema-files -m "Auto-merge ci-schema-files back to master"
       - name: Push changes to master
         run: |
           git push origin master

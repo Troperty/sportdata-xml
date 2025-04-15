@@ -20,7 +20,9 @@
               "type": "number"
             }
           },
-          "required": ["trackId"]
+          "required": [
+            "trackId"
+          ]
         },
         "track": {
           "type": "object",
@@ -38,7 +40,10 @@
               "type": "number"
             }
           },
-          "required": ["code", "domesticText"]
+          "required": [
+            "code",
+            "domesticText"
+          ]
         },
         "raceDayId": {
           "type": "number"
@@ -106,7 +111,14 @@
           "type": "object",
           "properties": {
             "code": {
-              "oneOf": [{ "type": "string" }, { "type": "number" }]
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
             },
             "domesticText": {
               "type": "string"
@@ -137,5 +149,7 @@
       ]
     }
   },
-  "required": ["RaceDay"]
+  "required": [
+    "RaceDay"
+  ]
 }

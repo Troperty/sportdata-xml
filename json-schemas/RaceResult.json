@@ -273,7 +273,6 @@
                 "required": [
                   "horse",
                   "placeInfo",
-                  "totalTime",
                   "kmTime"
                 ]
               }
